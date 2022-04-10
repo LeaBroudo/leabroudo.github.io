@@ -35,9 +35,29 @@
         font-weight: 700;
     }
 
+    H3 {
+        font-family: "Inconsolata";
+    }
+
     .text {
         font-family: "Inconsolata";
         font-weight: 400;
+    }
+
+    .description {
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+        text-indent: 25px;
+    }
+
+    .by {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -10px;
+        margin-bottom: 30px;
+        font-size: 10;
     }
     
     video {
@@ -162,20 +182,31 @@
         <H1>
             Holo Brawl
         </H1>
-        <p class="text"> 
-            WHY IS IT DOING THIS>??
+        <p class="by text"> 
+            by Lea Broudo
+        </p>
+        <p class="description text"> 
+            HoloBrawl is a VR board game that allows players to personally interact with their pieces. 
+            Pieces squirm when picked up, and have personalities of their own! The objective of the 
+            game is to kill all of your AI opponent’s pieces before they kill yours. 
+        </p>
+        <p class="description text"> 
+            Players must move their pieces to an opponent’s tile to attack them. Each piece has an attack
+            and defense score, and if the attacker’s attack score is larger enough than the defense’s 
+            defense score, with a bit of chance the attacker piece will kill the defense piece. Given 
+            different pairings of these scores, pieces can also be counter-killed or pushed to a new tile. 
         </p>
 
         <div class="title-container">
             <span>
-                <H3 class="text">Gameplay</H3>
+                <H3>Gameplay</H3>
                 <video controls>
                     <source src="HoloBrawlAlphaGameplay.mp4" type="video/mp4">
                 </video>
             </span>
     
             <span>
-                <H3 class="text" >UI</H3>
+                <H3>UI</H3>
                 <video controls>
                     <source src="HoloBrawlAlphaUI.mp4" type="video/mp4">
                 </video>
@@ -183,7 +214,7 @@
         </div>
 
         <div>
-            <H3 class="text">Gallery</H3>
+            <H3>Gallery</H3>
 
             <!-- Container for the image gallery -->
             <div class="container">
@@ -191,24 +222,24 @@
                 <!-- Full-width images with number text -->
                 <div class="mySlides">
                 <div class="numbertext text">1 / 5</div>
-                    <img src="gameImages/pieces-puching.png" style="width:100%">
-                </div>
-            
-                <div class="mySlides">
-                <div class="numbertext text">2 / 5</div>
-                    <img src="gameImages/piecing-fighting.png" style="width:100%">
-                </div>
-            
-                <div class="mySlides">
-                <div class="numbertext text">3 / 5</div>
                     <img src="gameImages/placing-piece-to-attack.png" style="width:100%">
                 </div>
             
                 <div class="mySlides">
-                <div class="numbertext text">4 / 5</div>
+                <div class="numbertext text">2 / 5</div>
                     <img src="gameImages/placing-piece.png" style="width:100%">
                 </div>
+
+                <div class="mySlides">
+                <div class="numbertext text">3 / 5</div>
+                    <img src="gameImages/pieces-puching.png" style="width:100%">
+                </div>
             
+                <div class="mySlides">
+                <div class="numbertext text">4 / 5</div>
+                    <img src="gameImages/piecing-fighting.png" style="width:100%">
+                </div>
+                
                 <div class="mySlides">
                 <div class="numbertext text">5 / 5</div>
                     <img src="gameImages/using-ui.png" style="width:100%">
@@ -226,19 +257,19 @@
                 <!-- Thumbnail images -->
                 <div class="row">
                     <div class="column">
-                        <img class="demo cursor" src="gameImages/pieces-puching.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                        <img class="demo cursor" src="gameImages/placing-piece-to-attack.png" style="width:100%" onclick="currentSlide(1)" alt="Player placing their piece to attack opponent">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="gameImages/piecing-fighting.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                        <img class="demo cursor" src="gameImages/placing-piece.png" style="width:100%" onclick="currentSlide(2)" alt="Player moving their piece">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="gameImages/placing-piece-to-attack.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                        <img class="demo cursor" src="gameImages/pieces-puching.png" style="width:100%" onclick="currentSlide(3)" alt="Pieces punching eachother">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="gameImages/placing-piece.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                        <img class="demo cursor" src="gameImages/piecing-fighting.png" style="width:100%" onclick="currentSlide(4)" alt="Pieces fighting eachother">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="gameImages/using-ui.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                        <img class="demo cursor" src="gameImages/using-ui.png" style="width:100%" onclick="currentSlide(5)" alt="Player using the game's user interface">
                     </div>
                 </div>
             </div>
