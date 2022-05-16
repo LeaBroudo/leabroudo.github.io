@@ -1,23 +1,30 @@
 function updateClock() {
     var dt = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) ;
-    document.getElementById('date-time').innerHTML=dt;
+    var dateElems = document.getElementsByClassName('date-time');
+    for (i=0; i < dateElems.length; i++) {
+      dateElems[i].innerHTML=dt;
+    } 
 
     // call this function again in 10ms
     setTimeout(updateClock, 10);
 }
 
-function switchPage(evt, cityName) {
+function switchPage(evt, pageName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("page");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
     tablinks = document.getElementsByClassName("navlink");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+    document.getElementById(pageName).style.display = "block";
+
+    if (pageName == "Artwork") {
+      let slideIndex = 1;
+      showSlides(slideIndex);
     }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
+
+    updateClock();
 }
 
 function plusSlides(n) {
@@ -46,7 +53,8 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-updateClock();
-switchPage(event, 'About');
+switchPage(document.getElementById('aboutpage'), 'About');
 let slideIndex = 1;
 showSlides(slideIndex);
+    
+updateClock();

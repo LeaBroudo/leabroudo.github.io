@@ -22,7 +22,7 @@
         </div>
 
         <span class="links">
-            <h3 class="navlink" onclick="switchPage(event, 'About')"> About </h3>
+            <h3 class="navlink" id="aboutpage" onclick="switchPage(event, 'About')"> About </h3>
             <h3 class="navlink" onclick="switchPage(event, 'Projects')"> Projects </h3>
             <h3 class="navlink" onclick="switchPage(event, 'Artwork')"> Artwork </h3>
             <h3 class="navlink" onclick="switchPage(event, 'Contact')"> Contact </h3>
@@ -32,7 +32,7 @@
     <div id="About" class="page">
         <h2 class="greeting">hello!</h2>
         <img class="aboutimage" src="house.gif"/>
-        <p><span id='date-time'></span>.</p>
+        <p><span class='date-time'></span>.</p>
 
         <p>
             I build things for a living
@@ -42,7 +42,7 @@
 
     <div id="Projects" class="page">
         <h2 class="greeting">Projects!</h2>
-        <p><span id='date-time'></span>.</p>
+        <p><span class='date-time'></span>.</p>
 
         <p>
             I build things for a living
@@ -51,21 +51,53 @@
     </div>
 
     <div id="Artwork" class="page">
-        <h2 class="greeting">Artwork!</h2>
-        <p><span id='date-time'></span>.</p>
-        <img class="artworkimage" src="welcomewolfanimation.gif"/>
+        <h2 class="greeting">artwork</h2>
         <img class="artworkimage" src="welcome3gk.gif"/>
-        <p>
-            I build things for a living
-        </p>
+        <p><span class='date-time'></span>.</p>
 
-        <div>
-            <H3>Gallery</H3>
+        <div class="maingallery">
+            <h3>PORTRAITS</h3>
+            <div class="galleryrow">
+                <img class="galleryimage" src="artwork/A Waltz with the Cosmos.jpeg"/>
+                <img class="galleryimage" src="artwork/Shinigami.jpeg"/>
+                <img class="galleryimage" src="artwork/Chrissy Boi.jpeg"/>
+            </div>
+            <div class="galleryrow">
+                <img class="galleryimage" src="artwork/debbie golden.jpeg"/>
+                <img class="galleryimage" src="artwork/Head in the Clouds.jpeg"/>
+                <img class="galleryimage" src="artwork/Kumquat Kids.jpeg"/>
+            </div>
+            <div class="galleryrow">
+                <img class="galleryimage" src="artwork/baby rainbow.jpeg"/>
+                <img class="galleryimage" src="artwork/The Wrath of Laplace's Demon.jpeg"/>
+                <img class="galleryimage" src="artwork/Wavetrain.jpeg"/>
+            </div>
 
-            <!-- Container for the image gallery -->
-            <div class="container">
+            <h3>SURREAL</h3>
+            <div class="galleryrow">
+                <img class="galleryimage" src="artwork/eyes sci fi.jpeg"/>
+                <img class="galleryimage" src="artwork/Remote (not in) Control .jpeg"/>
+                <img class="galleryimage" src="artwork/Viva drawing.jpeg"/>
+            </div>
+            <div class="galleryrow">
+                <img class="galleryimage" src="artwork/Hopscotch .jpeg"/>
+                <img class="galleryimage" src="artwork/Vision .jpg"/>
+            </div>
+            <div class="galleryrow">
+                <img class="galleryimagelong" src="artwork/A Valley in Shadow.jpeg"/>
+                <img class="galleryimagelong" src="artwork/Happy Nights call for Dreary Days.jpeg"/>
+                <img class="galleryimagelong" src="artwork/Words I Thought I'd Never Speak.jpeg"/>
+            </div>
 
-                <!-- Full-width images with number text -->
+            <h3>EMBROIDERY</h3>
+            <div class="galleryrow">
+                <img class="galleryimagelong" src="artwork/knight embroidery 1.jpg"/>
+            </div>
+        </div>
+        
+        <!-- <div>
+            <div class="gallerycontainer">
+
                 <div class="mySlides">
                 <div class="numbertext text">1 / 5</div>
                     <img src="remote_not_in_control_transparent.png" style="width:100%">
@@ -91,16 +123,13 @@
                     <img src="remote_not_in_control_transparent.png" style="width:100%">
                 </div>
             
-                <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             
-                <!-- Image text -->
                 <div class="caption-container text">
                 <p id="caption"></p>
                 </div>
             
-                <!-- Thumbnail images -->
                 <div class="row">
                     <div class="column">
                         <img class="demo cursor" src="remote_not_in_control_transparent.png" style="width:100%" onclick="currentSlide(1)" alt="Player placing their piece to attack opponent">
@@ -119,13 +148,13 @@
                     </div>
                 </div>
             </div>
-        </div>
-
+        </div> -->
+        <img class="artworkimage" src="dividermorao.gif"/>
     </div>
 
     <div id="Contact" class="page">
         <h2 class="greeting">Contact!</h2>
-        <p><span id='date-time'></span>.</p>
+        <p><span class='date-time'></span>.</p>
 
         <p>
             I build things for a living

@@ -49,12 +49,12 @@ a {
     
 }
 
-h3 {
+h3.navlink{
     transition: transform .1s ease-in-out;
     transform-origin: bottom left;
 }
 
-h3:hover {
+h3.navlink:hover {
     transform: rotate(-3deg);
 }
 
@@ -78,11 +78,13 @@ h3:hover {
 }
 
 /* Position the image container (needed to position the left and right arrows) */
-.container {
+.gallerycontainer {
     position: relative;
-    width: 500px;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Hide the images by default */
@@ -171,4 +173,31 @@ h3:hover {
 .active,
 .demo:hover {
     opacity: 1;
+}
+
+.artworkimage {
+    width: 25%;
+    height: 25%;
+}
+
+.maingallery {
+    margin: 40px;
+}
+
+.galleryrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.galleryimage {
+    margin: 10px;
+    width: 150px;
+}
+
+.galleryimagelong {
+    margin: 10px;
+    width: 200px;
 }
