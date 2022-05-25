@@ -1,4 +1,4 @@
-function updateClock() {
+function updateClock(page) {
     var dt = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) ;
     var dateElems = document.getElementsByClassName('date-time');
     for (i=0; i < dateElems.length; i++) {
@@ -6,7 +6,9 @@ function updateClock() {
     } 
 
     // call this function again in 10ms
-    setTimeout(updateClock, 10);
+    if (page === currentPage) {
+      setTimeout(updateClock, 10, page);
+    }
 }
 
 function switchPage(evt, pageName) {
@@ -18,6 +20,11 @@ function switchPage(evt, pageName) {
     tablinks = document.getElementsByClassName("navlink");
 
     document.getElementById(pageName).style.display = "block";
+    currentPage = pageName;
+
+    params = new URLSearchParams(location.search);
+    params.set('page', pageName);
+    window.history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
 
     updateClock();
 }
@@ -44,5 +51,5 @@ function getPageFromQueryParams() {
   
 }
 
-var pageName = getPageFromQueryParams();
-switchPage(document.getElementById(pageName.toLowerCase()+'page'), pageName);
+var currentPage = getPageFromQueryParams();
+switchPage(document.getElementById(currentPage.toLowerCase()+'page'), currentPage);

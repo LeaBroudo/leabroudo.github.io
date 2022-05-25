@@ -66,6 +66,7 @@ h3.navlink:hover {
     padding: 30px;
     padding-top: 0px;
     text-align: center;
+    display: none;
 }
 
 .aboutimage {
@@ -222,16 +223,4 @@ img.galleryimagelong:active, img.galleryimage:active {
 #btnControl:checked + label > img {
     width: 70px;
     height: 74px;
-}
-
-.portraitgallery {
-    height: 700px;
-}
-
-.surrealgallery {
-    height: 650px;
-}
-
-.embroiderygallery {
-    height: 210px;
 }
