@@ -201,3 +201,37 @@ h3.navlink:hover {
     margin: 10px;
     width: 200px;
 }
+
+img.galleryimagelong, img.galleryimage{
+    transition: transform .05s ease-in-out;
+    transform-origin: bottom left;
+}
+
+img.galleryimagelong:hover, img.galleryimage:hover {
+    transform: rotate(-1deg);
+}
+
+img.galleryimagelong:active, img.galleryimage:active {
+    height: 200%;
+}
+
+#btnControl {
+    display: none;
+}
+
+#btnControl:checked + label > img {
+    width: 70px;
+    height: 74px;
+}
+
+.portraitgallery {
+    height: 700px;
+}
+
+.surrealgallery {
+    height: 650px;
+}
+
+.embroiderygallery {
+    height: 210px;
+}

@@ -19,42 +19,30 @@ function switchPage(evt, pageName) {
 
     document.getElementById(pageName).style.display = "block";
 
-    if (pageName == "Artwork") {
-      let slideIndex = 1;
-      showSlides(slideIndex);
-    }
-
     updateClock();
 }
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+function getPageFromQueryParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  var page = urlParams.get('page');
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  if (page === null) {
+    return 'About';
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+  else if (page.toLowerCase() === 'projects') {
+    return 'Projects';
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
+  else if (page.toLowerCase() === 'artwork') {
+    return 'Artwork';
+  }
+  else if (page.toLowerCase() === 'contact') {
+    return 'Contact';
+  }
+  else {
+    return 'About';
+  }
+  
 }
 
-switchPage(document.getElementById('aboutpage'), 'About');
-let slideIndex = 1;
-showSlides(slideIndex);
-    
-updateClock();
+var pageName = getPageFromQueryParams();
+switchPage(document.getElementById(pageName.toLowerCase()+'page'), pageName);
