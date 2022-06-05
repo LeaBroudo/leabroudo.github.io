@@ -69,12 +69,35 @@
             I build things for a living
         </p>
 
+       
+
     </div>
 
     <div id="Artwork" class="page">
         <h2 class="greeting">artwork</h2>
         <img class="pageimage" src="paint.gif"/>
         <p><span class='date-time'></span>.</p>
+
+         <!-- Trigger/Open The Modal -->
+         <button id="myBtn" onclick="openModal(event, 'myModal')">Open Modal</button>
+
+         <!-- The Modal -->
+         <div id="myModal" class="modal">
+ 
+             <!-- Modal content -->
+             <div class="modal-content">
+                 <div class="modal-header">
+                 <span class="close" onclick="closeModal(event, 'myModal')">&times;</span>
+                 <h2>Modal Header</h2>
+                 </div>
+                 <div class="modal-body">
+                 <p>Some text in the Modal Body</p>
+                 <p>Some other text...</p>
+                 </div>
+                 <div class="modal-footer">
+                 </div>
+             </div>
+         </div>
 
         <div class="maingallery">
             <h3>PORTRAITS</h3>
@@ -121,6 +144,7 @@
                 <img class="activeimage" id="embroidery" src=""/>
                 <div class="galleryrow" id="embroidery">
                     <img class="galleryimagelong" src="artwork/knight embroidery 1.jpg"/>
+                    <img class="galleryimagelong" src="artwork/embroidered_bird.png"/>
                 </div>
             </div>
         </div>

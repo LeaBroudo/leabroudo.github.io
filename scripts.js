@@ -1,5 +1,5 @@
 function updateClock(page) {
-    var dt = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}) ;
+    var dt = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"long", day:"numeric"}) ;
     var dateElems = document.getElementsByClassName('date-time');
     for (i=0; i < dateElems.length; i++) {
       dateElems[i].innerHTML=dt;
@@ -91,9 +91,31 @@ function setFavicon(pageName) {
   link.href = pageImage.src;
 }
 
+// When the user clicks the button, open the modal 
+function openModal(evt, modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = "block";
+  currentModal = modal;
+}
+
+// When the user clicks on <span> (x), close the modal
+function closeModal(evt, modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = "none";
+  currentModal = null;
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (currentModal !== null && event.target == currentModal) {
+    currentModal.style.display = "none";
+    currentModal = null;
+  }
+}
+
+var currentModal = null;
 var currentPage = getPageFromQueryParams();
 switchPage(document.getElementById(currentPage.toLowerCase()+'page'), currentPage);
-
 
 var x = window.matchMedia("(max-width: 545px)")
 viewportStylingChange(x) // Call listener function at run time
