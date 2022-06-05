@@ -4,20 +4,14 @@ function updateClock(page) {
     for (i=0; i < dateElems.length; i++) {
       dateElems[i].innerHTML=dt;
     } 
-
-    // call this function again in 10ms
-    if (page === currentPage) {
-      setTimeout(updateClock, 10, page);
-    }
 }
 
 function switchPage(evt, pageName) {
-    var i, tabcontent, tablinks;
+    var i, tabcontent;
     tabcontent = document.getElementsByClassName("page");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     }
-    tablinks = document.getElementsByClassName("navlink");
 
     document.getElementById(pageName).style.display = "block";
     currentPage = pageName;
@@ -25,6 +19,8 @@ function switchPage(evt, pageName) {
     params = new URLSearchParams(location.search);
     params.set('page', pageName);
     window.history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
+
+    //setFavicon(pageName);
 
     updateClock();
 }
@@ -51,5 +47,54 @@ function getPageFromQueryParams() {
   
 }
 
+function viewportStylingChange(x) {
+  var linkContainer = document.getElementsByClassName('links')[0];
+  var linkParent = linkContainer.parentNode;
+
+  if (x.matches) { // If is mobile
+
+    if (linkParent.className === 'linkParentMobile') {
+      return;
+    }
+
+    var newLinkParent = document.getElementsByClassName('linkParentMobile')[0];
+    newLinkParent.appendChild(linkContainer);
+    linkContainer.style.justifyContent = 'center';
+    linkContainer.style.position = 'absolute';
+    linkContainer.style.bottom = '0px';
+
+    newLinkParent.style.height = '60px';
+    newLinkParent.style.borderTop = '1px solid white';
+
+  } else {
+    if (linkParent.className === 'linkParentDesktop') {
+      return;
+    }
+
+    var newLinkParent = document.getElementsByClassName('linkParentDesktop')[0];
+    newLinkParent.appendChild(linkContainer);
+    linkContainer.style.justifyContent = 'flex-end';
+    linkContainer.style.position = 'static';
+    linkContainer.style.bottom = '';
+    linkContainer.style.marginTop = '-15px';
+
+    linkParent.style.height = '0px';
+    linkParent.style.borderTop = '0px solid black';
+  }
+}
+
+function setFavicon(pageName) {
+  var link = document.querySelector("link[rel~='icon']");
+
+  var pageContainer = document.getElementById(pageName);
+  var pageImage = pageContainer.querySelector('.pageimage');
+  link.href = pageImage.src;
+}
+
 var currentPage = getPageFromQueryParams();
 switchPage(document.getElementById(currentPage.toLowerCase()+'page'), currentPage);
+
+
+var x = window.matchMedia("(max-width: 545px)")
+viewportStylingChange(x) // Call listener function at run time
+x.addListener(viewportStylingChange) // Attach listener function on state changes

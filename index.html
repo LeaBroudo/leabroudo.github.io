@@ -12,6 +12,7 @@
 
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="palomail.gif">
 </head>
 
 <body>
@@ -21,22 +22,41 @@
             <p class="subtitle">software engineer & other things</p>
         </div>
 
-        <span class="links">
-            <h3 class="navlink" id="aboutpage" onclick="switchPage(event, 'About')"> About </h3>
-            <h3 class="navlink" id="projectspage" onclick="switchPage(event, 'Projects')"> Projects </h3>
-            <h3 class="navlink" id="artworkpage" onclick="switchPage(event, 'Artwork')"> Artwork </h3>
-            <h3 class="navlink" id="contactpage" onclick="switchPage(event, 'Contact')"> Contact </h3>
-        </span>
+        <div class="linkParentDesktop">
+            <span class="links">
+                <h3 class="navlink" id="aboutpage" onclick="switchPage(event, 'About')"> About </h3>
+                <h3 class="navlink" id="projectspage" onclick="switchPage(event, 'Projects')"> Projects </h3>
+                <h3 class="navlink" id="artworkpage" onclick="switchPage(event, 'Artwork')"> Artwork </h3>
+                <h3 class="navlink" id="contactpage" onclick="switchPage(event, 'Contact')"> Contact </h3>
+            </span>
+        </div>
     </div>
 
     <div id="About" class="page">
-        <h2 class="greeting">hello!</h2>
+        <h2 class="greeting">about</h2>
         <img class="pageimage" src="house.gif"/>
         <p><span class='date-time'></span>.</p>
+        <div class="aboutinfo">
 
-        <p>
-            I build things for a living
-        </p>
+        <div class="easyreading">
+            <p>
+                I'm Lea Broudo, a software engineer from New York.
+            </p>
+            <p>
+                Between 2014 and 2018 I taught myself to draw portraits, since I was interested in
+                being able to capture people's likeness on one page. After portraits, I began to
+                work on larger and more surreal scenes, as well as branch off into other mediums like
+                embroidery and pottery. You can check out some of my work here. 
+            </p>
+            <p>
+                While pursuing my undergrad at Columbia I learned to program, but realized
+                I could continue art within engineering. I specialized in computer graphics and vision, 
+                and worked on VR projects at Steven Feiner's Computer Graphics and User Interfaces Lab.  
+                
+            </p>
+        </div>
+
+        </div>
 
     </div>
 
@@ -116,13 +136,15 @@
         <p class="contactlink"><a target="_blank" href="mailto:17lbroudo@gmail.com"> E-MAIL </a></p>
         <p class="contactlink"><a target="_blank" href="https://www.instagram.com/orchidjuice/"> INSTAGRAM </a></p>
         <p class="contactlink"><a target="_blank" href="https://github.com/LeaBroudo"> GITHUB </a></p>
-        <p class="contactlink"><a target="_blank" href="https://www.linkedin.com/in/lea-broudo-265036170/"> LINKED-IN </a></p>
+        <p class="contactlink"><a target="_blank" href="https://www.linkedin.com/in/lea-broudo-265036170/"> LINKEDIN </a></p>
 
         <div class="contactdivider">*</div>
 
         <p class="contactmessage">Please contact me wherever!</p>
 
     </div>
+
+    <div class="linkParentMobile"></div>
     
     <script type="text/javascript" src="scripts.js"></script>
 </body>
