@@ -92,17 +92,31 @@ function setFavicon(pageName) {
 }
 
 // When the user clicks the button, open the modal 
-function openModal(evt, modalId) {
+function openModal(evt, modalId, title, picture) {
   var modal = document.getElementById(modalId);
   modal.style.display = "block";
+
+  if (title) {
+    modal.querySelector('.modal-content')
+          .querySelector('.modal-header')
+          .querySelector('.modal-header-text').innerHTML = title;
+  }
+
+  if (picture) {
+    modal.querySelector('.modal-content')
+          .querySelector('.modal-body')
+          .querySelector('.modal-img').src = picture;
+  }
+  
   currentModal = modal;
 }
 
 // When the user clicks on <span> (x), close the modal
 function closeModal(evt, modalId) {
-  var modal = document.getElementById(modalId);
-  modal.style.display = "none";
-  currentModal = null;
+  if (currentModal) {
+    currentModal.style.display = "none";
+    currentModal = null;
+  }
 }
 
 // When the user clicks anywhere outside of the modal, close it

@@ -78,23 +78,17 @@
         <img class="pageimage" src="paint.gif"/>
         <p><span class='date-time'></span>.</p>
 
-         <!-- Trigger/Open The Modal -->
-         <button id="myBtn" onclick="openModal(event, 'myModal')">Open Modal</button>
-
          <!-- The Modal -->
-         <div id="myModal" class="modal">
+         <div id="artModal" class="modal">
  
              <!-- Modal content -->
              <div class="modal-content">
                  <div class="modal-header">
-                 <span class="close" onclick="closeModal(event, 'myModal')">&times;</span>
-                 <h2>Modal Header</h2>
+                    <span class="close" onclick="closeModal(event)">x</span>
+                    <h2 class="modal-header-text">Modal Header</h2>
                  </div>
                  <div class="modal-body">
-                 <p>Some text in the Modal Body</p>
-                 <p>Some other text...</p>
-                 </div>
-                 <div class="modal-footer">
+                    <img class="modal-img" src=""/>
                  </div>
              </div>
          </div>
@@ -102,49 +96,46 @@
         <div class="maingallery">
             <h3>PORTRAITS</h3>
             <div>
-                <img class="activeimage" id="portrait" src=""/>
                 <div class="galleryrow" id="portrait">
-                    <img class="galleryimage" src="artwork/A Waltz with the Cosmos.jpeg"/>
-                    <img class="galleryimage" src="artwork/Head in the Clouds.jpeg"/>
-                    <img class="galleryimage" src="artwork/Kumquat Kids.jpeg"/>
+                    <img class="galleryimage" src="artwork/A Waltz with the Cosmos.jpeg" onclick="openModal(event, 'artModal', 'A Waltz with the Cosmos', 'artwork/A Waltz with the Cosmos.jpeg')"/>
+                    <img class="galleryimage" src="artwork/Head in the Clouds.jpeg" onclick="openModal(event, 'artModal', 'Head in the Clouds', 'artwork/Head in the Clouds.jpeg')"/>
+                    <img class="galleryimage" src="artwork/Kumquat Kids.jpeg" onclick="openModal(event, 'artModal', 'Kumquat Kids', 'artwork/Kumquat Kids.jpeg')"/>
                 </div>
                 <div class="galleryrow" id="portrait">
-                    <img class="galleryimage" src="artwork/debbie golden.jpeg"/>
-                    <img class="galleryimage" src="artwork/Shinigami.jpeg"/>
-                    <img class="galleryimage" src="artwork/Chrissy Boi.jpeg"/>
+                    <img class="galleryimage" src="artwork/debbie golden.jpeg" onclick="openModal(event, 'artModal', 'Sidewalk Envies', 'artwork/debbie golden.jpeg')"/>
+                    <img class="galleryimage" src="artwork/Shinigami.jpeg" onclick="openModal(event, 'artModal', 'Shinigami', 'artwork/Shinigami.jpeg')"/>
+                    <img class="galleryimage" src="artwork/Chrissy Boi.jpeg" onclick="openModal(event, 'artModal', 'Mr. Chris', 'artwork/Chrissy Boi.jpeg')"/>
                 </div>
                 <div class="galleryrow" id="portrait">
-                    <img class="galleryimage" src="artwork/baby rainbow.jpeg"/>
-                    <img class="galleryimage" src="artwork/The Wrath of Laplace's Demon.jpeg"/>
-                    <img class="galleryimage" src="artwork/Wavetrain.jpeg"/>
+                    <img class="galleryimage" src="artwork/baby rainbow.jpeg" onclick="openModal(event, 'artModal', 'Breeze By', 'artwork/baby rainbow.jpeg')"/>
+                    <img class="galleryimage" src="artwork/The Wrath of Laplaces Demon.jpeg" onclick="openModal(event, 'artModal', 'The Wrath of Laplace\&apos;s Demon', 'artwork/The Wrath of Laplaces Demon.jpeg')"/>
+                    <img class="galleryimage" src="artwork/Wavetrain.jpeg" onclick="openModal(event, 'artModal', 'Wavetrain', 'artwork/Wavetrain.jpeg')"/>
                 </div>
             </div>
 
             <h3>SURREAL</h3>
             <div>
-                <img class="activeimage" id="surreal" src=""/>
                 <div class="galleryrow" id="surreal">
-                    <img class="galleryimage" src="artwork/eyes sci fi.jpeg"/>
-                    <img class="galleryimage" src="artwork/Remote (not in) Control .jpeg"/>
-                    <img class="galleryimage" src="artwork/Viva drawing.jpeg"/>
+                    <img class="galleryimage" src="artwork/eyes sci fi.jpeg" onclick="openModal(event, 'artModal', 'Traveling', 'artwork/eyes sci fi.jpeg')"/>
+                    <img class="galleryimage" src="artwork/Remote (not in) Control .jpeg" onclick="openModal(event, 'artModal', 'Remote (not in) Control', 'artwork/Remote (not in) Control .jpeg')"/>
+                    <img class="galleryimage" src="artwork/Viva drawing.jpeg" onclick="openModal(event, 'artModal', 'Viva', 'artwork/Viva drawing.jpeg')"/>
                 </div>
                 <div class="galleryrow" id="surreal">
-                    <img class="galleryimage" src="artwork/Hopscotch .jpeg"/>
-                    <img class="galleryimage" src="artwork/Vision .jpg"/>
+                    <img class="galleryimage" src="artwork/Hopscotch .jpeg" onclick="openModal(event, 'artModal', 'Weather Study', 'artwork/Hopscotch .jpeg')"/>
+                    <img class="galleryimage" src="artwork/Vision .jpg" onclick="openModal(event, 'artModal', 'Vision', 'artwork/Vision .jpg')"/>
                 </div>
                 <div class="galleryrow" id="surreal">
-                    <img class="galleryimagelong" src="artwork/A Valley in Shadow.jpeg"/>
-                    <img class="galleryimagelong" src="artwork/Happy Nights call for Dreary Days.jpeg"/>
-                    <img class="galleryimagelong" src="artwork/Words I Thought I'd Never Speak.jpeg"/>
+                    <img class="galleryimagelong" src="artwork/A Valley in Shadow.jpeg" onclick="openModal(event, 'artModal', 'A Valley in Shadow', 'artwork/A Valley in Shadow.jpeg')"/>
+                    <img class="galleryimagelong" src="artwork/Happy Nights call for Dreary Days.jpeg" onclick="openModal(event, 'artModal', 'Happy Nights call for Dreary Days', 'artwork/Happy Nights call for Dreary Days.jpeg')"/>
+                    <img class="galleryimagelong" src="artwork/Words I Thought Id Never Speak.jpeg" onclick="openModal(event, 'artModal', 'Words I Thought I\&apos;d Never Speak', 'artwork/Words I Thought Id Never Speak.jpeg')"/>
                 </div>
             </div>
 
             <h3>EMBROIDERY</h3>
             <div>
-                <img class="activeimage" id="embroidery" src=""/>
                 <div class="galleryrow" id="embroidery">
-                    <img class="galleryimagelong" src="artwork/knight embroidery 1.jpg"/>
-                    <img class="galleryimagelong" src="artwork/embroidered_bird.png"/>
+                    <img class="galleryimagelong" src="artwork/knight embroidery 1.jpg" onclick="openModal(event, 'artModal', 'Encounter the Couple', 'artwork/knight embroidery 1.jpg')"/>
+                    <img class="galleryimagelong" src="artwork/embroidered_bird.png" onclick="openModal(event, 'artModal', 'Bird Study', 'artwork/embroidered_bird.png')"/>
                 </div>
             </div>
         </div>

@@ -147,6 +147,7 @@ p.contactlink:hover {
 
 .easyreading {
     font-family: 'Hind Siliguri', sans-serif;
+    font-size: 15px;
     line-height: 20px;
     text-indent: 10px;
 }
@@ -210,13 +211,15 @@ p.contactlink:hover {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
   }
   
   .close:hover,
   .close:focus {
-    color: #000;
     text-decoration: none;
     cursor: pointer;
+    transform: rotate(-5deg);
   }
   
   .modal-header {
@@ -225,27 +228,33 @@ p.contactlink:hover {
     border-bottom: 1px solid white;
   }
   
-  .modal-body {
-      padding: 2px 16px;
+    .modal-body {
+        padding: auto;
+    }
+
+    .modal-img {
+        max-height: 400px;
+        max-width: 300px;
+        margin: 30px;
     }
   
-  /* Add Animation */
-  @-webkit-keyframes slideIn {
-    from {bottom: -300px; opacity: 0} 
-    to {bottom: 0; opacity: 1}
-  }
-  
-  @keyframes slideIn {
-    from {bottom: -300px; opacity: 0}
-    to {bottom: 0; opacity: 1}
-  }
-  
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
-  }
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0} 
+        to {bottom: 0; opacity: 1}
+    }
+    
+    @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+    }
+    
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+    }
+    
+    @keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+    }
