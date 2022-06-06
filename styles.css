@@ -216,17 +216,19 @@ p.contactlink:hover {
   .modal-content {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    /* left: -50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    /* left: calc((100% - 80px) / 2); */
+    left: calc((100% - 60%) / 2);
 
-    width: 80%;
-    background-color: black;
-    height: 80%;
-    border: 1px solid white;
-    margin: 10px;
+    width: 60%;
+    max-height: 100%;
+    margin-bottom: 50px;
 
     overflow: hidden;
+    border: 1px solid white;
+    background-color: black;
 
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
@@ -240,7 +242,6 @@ p.contactlink:hover {
         top: initial;
         bottom: 0;
         left: 0;
-        transform: translate(0%,0%);
     
         width: 99%;
         margin: 0;
@@ -276,8 +277,17 @@ p.contactlink:hover {
     }
 
     .modal-img {
-        height: 70%;
+        max-width:50%;
+        min-width: 100px;
+        height: auto;
         margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 545px) {
+        .modal-img {
+            max-width:70%;
+        }
     }
   
     /* Add Animation */
