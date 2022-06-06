@@ -221,7 +221,7 @@ p.contactlink:hover {
     transform: translate(-50%, -50%); */
     /* left: calc((100% - 80px) / 2); */
     left: calc((100% - 60%) / 2);
-
+    top: 50px;
     width: 60%;
     max-height: 100%;
     margin-bottom: 50px;
