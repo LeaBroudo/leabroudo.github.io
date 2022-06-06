@@ -225,10 +225,12 @@ p.contactlink:hover {
     border: 1px solid white;
     margin: 10px;
 
+    overflow: hidden;
+
     -webkit-animation-name: slideIn;
     -webkit-animation-duration: 0.4s;
     animation-name: slideIn;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
   }
 
   @media (max-width: 545px) {
@@ -273,8 +275,7 @@ p.contactlink:hover {
     }
 
     .modal-img {
-        max-height: 400px;
-        max-width: 300px;
+        height: 70%;
         margin: 30px;
     }
   

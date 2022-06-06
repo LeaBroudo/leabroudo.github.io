@@ -104,7 +104,7 @@ function openModal(evt, modalId, title, picture) {
 
   if (picture) {
     modal.querySelector('.modal-content')
-          .querySelector('.modal-body')
+          // .querySelector('.modal-body')
           .querySelector('.modal-img').src = picture;
   }
   
