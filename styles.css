@@ -19,6 +19,7 @@ a {
     display: flex; 
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: space-between;
     padding: 30px;
     padding-bottom: 10px;
 }
@@ -164,7 +165,7 @@ p.contactlink:hover {
     transform: rotate(-0.2deg);
 }
 
-.contactdivider {
+.divider {
     margin: 20px;
     position:relative;
     top:3px;
