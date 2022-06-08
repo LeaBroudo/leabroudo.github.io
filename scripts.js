@@ -92,7 +92,7 @@ function setFavicon(pageName) {
 }
 
 // When the user clicks the button, open the modal 
-function openModal(evt, modalId, title, picture) {
+function openModal(evt, modalId, title, picture, meatId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "block";
 
@@ -103,20 +103,40 @@ function openModal(evt, modalId, title, picture) {
   }
 
   if (picture) {
-    modal.querySelector('.modal-content')
+    currentModalImage = modal.querySelector('.modal-content')
           // .querySelector('.modal-body')
-          .querySelector('.modal-img').src = picture;
+          .querySelector('.modal-img');
+    currentModalImage.src = picture;
+    currentModalImage.style.display = 'initial';
+  }
+
+  if (meatId) {
+    if (currentModalImage) {
+      currentModalImage.style.display = 'none';
+      currentModalImage= null;
+    }
+    var currentModalMeat = document.getElementById(meatId);
+    currentModalMeat.style.display = "block";
   }
   
+  document.body.style.overflow = 'hidden';
+
   currentModal = modal;
 }
 
 // When the user clicks on <span> (x), close the modal
-function closeModal(evt, modalId) {
+function closeModal(evt) {
   if (currentModal) {
     currentModal.style.display = "none";
     currentModal = null;
   }
+
+  if (currentModalMeat) {
+    currentModalMeat.style.display = "none";
+    currentModalMeat = null;
+  }
+
+  document.body.style.overflow = 'scroll';
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -124,10 +144,17 @@ window.onclick = function(event) {
   if (currentModal !== null && event.target == currentModal) {
     currentModal.style.display = "none";
     currentModal = null;
+    document.body.style.overflow = 'scroll';
+  }
+
+  if (currentModalMeat) {
+    currentModalMeat.style.display = "none";
+    currentModalMeat = null;
   }
 }
 
 var currentModal = null;
+var currentModalImage = null;
 var currentModalMeat = null;
 var currentPage = getPageFromQueryParams();
 switchPage(document.getElementById(currentPage.toLowerCase()+'page'), currentPage);
