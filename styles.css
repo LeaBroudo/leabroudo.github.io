@@ -127,6 +127,7 @@ h3.navlink:hover {
     margin-top: 30px;
     margin-bottom: 30px;
     width: 250px;
+    height: 270px;
 }
 
 .projectimage {
@@ -155,6 +156,11 @@ h3.navlink:hover {
     width: 250px;
     height: 60px;
     vertical-align: middle;
+}
+
+.projectinfo {
+    text-align: left;
+    font-size: 12px;
 }
 
 .projecttext:hover {
@@ -189,12 +195,13 @@ p.contactlink:hover {
     text-align: left;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 30px;
     max-width: 700px;
+    font-size: 15px;
 }
 
 .easyreading {
     font-family: 'Hind Siliguri', sans-serif;
-    font-size: 15px;
     line-height: 20px;
     text-indent: 10px;
 }
@@ -280,7 +287,14 @@ p.contactlink:hover {
   }
   
     .modal-body {
-        padding: auto;
+        width: auto;
+        height: 70%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .modal-meat {
+        display: none;
     }
 
     .modal-img {

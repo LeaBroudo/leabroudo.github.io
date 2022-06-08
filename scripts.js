@@ -128,6 +128,7 @@ window.onclick = function(event) {
 }
 
 var currentModal = null;
+var currentModalMeat = null;
 var currentPage = getPageFromQueryParams();
 switchPage(document.getElementById(currentPage.toLowerCase()+'page'), currentPage);
 

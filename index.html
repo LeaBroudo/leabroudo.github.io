@@ -69,14 +69,48 @@
             I build things for a living
         </p>
 
+        <!-- The Modal -->
+        <div id="projectModal" class="modal">
+ 
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                   <span class="close" onclick="closeModal(event)">x</span>
+                   <h2 class="modal-header-text">Modal Header</h2>
+                </div>
+                <img class="modal-img" src=""/>
+                <div class="modal-body">
+                    <div class="modal-meat" id="holobrawl">
+                        <p>
+                            HoloBrawl is a VR board game that allows players to personally interact with their pieces. 
+                            Pieces squirm when picked up, and have personalities of their own! The objective of the game 
+                            is to kill all of your AI opponent’s pieces before they kill yours. Players must move their 
+                            pieces to an opponent’s tile to attack them. Each piece has an attack and defense score, and 
+                            if the difference between the attacker’s attack score and the defense’s defense score is big 
+                            enough, with a bit of chance the attacker will kill the defense piece. Given different pairings 
+                            of these scores, pieces can also be counter-killed or pushed to a new tile.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="galleryrow" id="portrait">
             <div class="galleryproject">
                 <div class="projecttext">Holo Brawl VR</div>
-                <img class="projectimage" src="projects/gameImages/holobrawlgif.gif">
+                <img class="projectimage" src="projects/gameImages/holobrawlgif.gif" onclick="openModal(event, 'projectModal', 'Holo Brawl VR', null, 'holobrawl')">
+                <p class="easyreading projectinfo">
+                    Oculus Quest board game using hand tracking. 
+                    I'm currently developing it further as part of the Oculus Start Program!
+                </p>
             </div>           
             <div class="galleryproject">
                 <div class="projecttext">Collaborative Urban Virtual Environment (CURVE)</div>
                 <img class="projectimage" src="projects/pinboard.gif">
+                <p class="easyreading projectinfo">
+                    Collaborative exploration of urban data in virtual reality 
+                    using SteamVR. 
+                </p>
             </div>   
             <div class="galleryproject">
                 <div class="projecttext">Sine AR</div>
@@ -120,17 +154,6 @@
                 <img class="projectimage" src="projects/sketchsage.png">
             </div>   
         </div>
-
-        <!--Zocdoc-->
-
-        <!--Oculus Start Holo brawl-->
-        <!--Curve-->
-
-
-        <!--sine ar-->
-        <!--on a roll-->
-        <!--tower defense-->
-
     </div>
 
     <div id="Artwork" class="page">
@@ -139,9 +162,20 @@
         <div class='date-time'><span></span>.</div>
         <div class="divider">*</div>
 
-        <p class="easyreading">
-            I draw things for a living
-        </p>
+        <div class="easyreading info">
+            <p>
+                Most of these portraits I drew between 2014 and 2018. 
+            </p>
+            <p>
+                The first pieces in each section, “A  Waltz with the Cosmos” and
+                “Remote (not in) Control”, were displayed in the Rubell Family 
+                Collection Gallery in Miami. 
+            </p>
+            <p>
+                I won the Congressional Art Award for the second piece below, 
+                "Head in the Clouds", which was displayed in the U.S. Capitol for a year.
+            </p>
+        </div>
 
          <!-- The Modal -->
          <div id="artModal" class="modal">
@@ -152,8 +186,6 @@
                     <span class="close" onclick="closeModal(event)">x</span>
                     <h2 class="modal-header-text">Modal Header</h2>
                  </div>
-                 <!-- <div class="modal-body">
-                 </div> -->
                  <img class="modal-img" src=""/>
              </div>
          </div>
