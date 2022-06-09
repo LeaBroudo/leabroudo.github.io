@@ -133,6 +133,7 @@ h3.navlink:hover {
     margin-bottom: 30px;
     width: 250px;
     height: 270px;
+    cursor: pointer;
 }
 
 .projectimage {
@@ -140,6 +141,8 @@ h3.navlink:hover {
     height: 130px;
     top: 0;
     object-fit: cover;
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
 }
 
 .projectimage:hover {
