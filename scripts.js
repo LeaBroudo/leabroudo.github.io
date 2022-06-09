@@ -111,11 +111,7 @@ function openModal(evt, modalId, title, picture, meatId) {
   }
 
   if (meatId) {
-    if (currentModalImage) {
-      currentModalImage.style.display = 'none';
-      currentModalImage= null;
-    }
-    var currentModalMeat = document.getElementById(meatId);
+    currentModalMeat = document.getElementById(meatId);
     currentModalMeat.style.display = "block";
   }
   
@@ -145,11 +141,11 @@ window.onclick = function(event) {
     currentModal.style.display = "none";
     currentModal = null;
     document.body.style.overflow = 'scroll';
-  }
 
-  if (currentModalMeat) {
-    currentModalMeat.style.display = "none";
-    currentModalMeat = null;
+    if (currentModalMeat !== null) {
+      currentModalMeat.style.display = "none";
+      currentModalMeat = null;
+    }
   }
 }
 
