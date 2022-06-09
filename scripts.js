@@ -96,15 +96,21 @@ function openModal(evt, modalId, title, picture, meatId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "block";
 
+  var modalContent = modal.querySelector('.modal-content');
+  modalContent.scrollTop = 0;
+
+  var modalBody = modalContent.querySelector('.modal-body');
+  if (modalBody) {
+    modalBody.scrollTop = 0;
+  }
+
   if (title) {
-    modal.querySelector('.modal-content')
-          .querySelector('.modal-header')
+    modalContent.querySelector('.modal-header')
           .querySelector('.modal-header-text').innerHTML = title;
   }
 
   if (picture) {
     currentModalImage = modal.querySelector('.modal-content')
-          // .querySelector('.modal-body')
           .querySelector('.modal-img');
     currentModalImage.src = picture;
     currentModalImage.style.display = 'initial';
@@ -116,7 +122,6 @@ function openModal(evt, modalId, title, picture, meatId) {
   }
   
   document.body.style.overflow = 'hidden';
-
   currentModal = modal;
 }
 
