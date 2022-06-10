@@ -88,7 +88,7 @@
                 </div>
                 <div class="modal-body easyreading">
                     <!-- Holo Brawl -->
-                    <div class="modal-meat" id="holobrawl">
+                    <div class="modal-meat" id="holo-brawl">
                         <p>
                             HoloBrawl is a VR board game that allows players to personally interact with their pieces. 
                             Pieces squirm when picked up, and have personalities of their own! The objective of the game 
@@ -155,29 +155,15 @@
                     <!-- CURVE -->
                     <div class="modal-meat" id="curve">
                         <p>
-                            sineAR is an augmented reality app that allows users to learn about acoustic waves through creating 
-                            and modifying spatial audio ensembles. With step-by-step tutorials and multiple methods of interaction, 
-                            users quickly and immersively create sounds in their AR environment and experience how modifying 
-                            frequency and amplitude leads to an interesting new world of sound.
+                            I worked at Columbia University's Computer Graphics and User Interfaces (CGUI) 
+                            Lab on a Collaborative Urban Virtual Environment under Professor Steven Feiner 
+                            and lead Doctoral researchers. The project is used for 3D urban data visualization 
+                            in VR, allowing users to select infrastructure to examine, filter, and expand data. 
+                            I further developed the Unity framework with SteamVR and the Mapbox API to research 
+                            the interactions of multiple users within a virtual representation of NYC. I also 
+                            implemented an exclusively Desktop interface so that users without head-worn displays 
+                            or hand-held mobile devices during the pandemic could still use CURVE.
                         </p>
-                        <div class="galleryrow"> 
-                            <div class="modal-video-item">
-                                <video class="modal-video" muted autoplay controls loop>
-                                    <source src="projects/holobrawl/HoloBrawlAlphaUI.mp4" type="video/mp4">
-                                </video>
-                                <p class="modal-item-info">
-                                    User Interface
-                                </p>
-                            </div>
-                            <div class="modal-video-item">
-                                <video class="modal-video" muted autoplay controls loop>
-                                    <source src="projects/holobrawl/HoloBrawlAlphaGameplay.mp4" type="video/mp4">
-                                </video>
-                                <p class="modal-item-info">
-                                    Gameplay
-                                </p>
-                            </div>
-                        </div>
                         <div class="galleryrow" id="portrait">
                             <div class="modal-item">
                                 <img class="modalimage" src="projects/holobrawl/using-ui.png" />
@@ -212,12 +198,14 @@
                         </div>
                     </div>
                     <!-- SineAR -->
-                    <div class="modal-meat" id="sinear">
+                    <div class="modal-meat" id="sine-ar">
                         <p>
-                            sineAR is an augmented reality app that allows users to learn about acoustic waves through creating 
-                            and modifying spatial audio ensembles. With step-by-step tutorials and multiple methods of interaction, 
-                            users quickly and immersively create sounds in their AR environment and experience how modifying 
-                            frequency and amplitude leads to an interesting new world of sound.
+                            Along with two classmates using Unity and Vuforia I developed sineAR, 
+                            an augmented reality app that allows users to learn about acoustic waves 
+                            through creating and modifying spatial audio ensembles. With step-by-step 
+                            tutorials and multiple methods of interaction, users quickly and immersively 
+                            create sounds in their AR environment and experience how modifying frequency 
+                            and amplitude leads to an interesting new world of sound.
                         </p>
                         <div class="galleryrow"> 
                             <div class="modal-video-item">
@@ -270,6 +258,70 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Ray Tracer -->
+                    <div class="modal-meat" id="ray-tracer">
+                        <p>
+                            This is a Raytracer I wrote that uses BRDF calculations to render images. 
+                            Implemented recursive reflections, depth of field, and shadows from scratch.
+                        </p>
+                    </div>
+                    <!-- Shaders -->
+                    <div class="modal-meat" id="shaders">
+                        <p>
+                            A number of GLSL shaders I implemented, including: Phong, Gouraud, texture 
+                            modulation, normal mapping, checkerboard pattern, cel (toon), and a more 
+                            creative rainbow shader!
+                        </p>
+                    </div>
+                    <!-- Insect Garden -->
+                    <div class="modal-meat" id="insect-garden">
+                        <p>
+                            This is a plugin I wrote for Maya that allows users to create meshes of different types of insects. 
+                            These insects are created either randomly or according to user-specified input in a slider menu. 
+                            The tool was written in Python using Maya's API, and the final insects were rendered in Arnold.                       
+                        </p>
+                    </div>
+                    <!-- Tree Generation -->
+                    <div class="modal-meat" id="tree-generation">
+                        <p>
+                            In this project, I was interested in creating a Maya Plugin that let users 
+                            easily create different types of trees. In order to generate trees that looked 
+                            realistic, I used procedural L-systems with stochastic sampling. Users can input 
+                            their own seeds to create even more varied trees, and they can also control 
+                            parameters like branch tapering, leaf and flower density, and mesh texturing. 
+                        </p>
+                        <p>
+                            The tool was written in Python for Maya, and the final trees were rendered in Arnold. 
+                        </p>
+                    </div>
+                    <!-- Walter -->
+                    <div class="modal-meat" id="walter">
+                        <p>
+                            This is a character I modeled in Maya and textured using Substance Painter.  
+                            I was responsible for the concept and design of the character. The character also 
+                            has a fully functional rig with full IK/FK functionality for the arms, legs, and spine. 
+                            The walk cycle animation was also done be me, with the final scene rendered in Arnold.
+                        </p>
+                    </div>
+                    <!-- Spaceflight -->
+                    <div class="modal-meat" id="spaceflight">
+                        <p>
+                            Stuff about space
+                        </p>
+                    </div>
+                    <!-- Sketchsage -->
+                    <div class="modal-meat" id="sketchsage">
+                        <p>
+                            For this project, I wanted to create a tool that gave artists a realistic 
+                            figure model to use for sketching or illustration. I thought it was time 
+                            for an upgrade from those old-school wooden models, so Sketch Sage was born. 
+                        </p>
+                        <p>
+                            The UI was developed using plain JavaScript and HTML/CSS, and the graphics 
+                            were all made using THREE.js. After the desktop and mobile versions were completed 
+                            in July 2019, the site gained over 1,500 active users in its first four months. 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -291,44 +343,44 @@
                     using SteamVR. 
                 </p>
             </div>   
-            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'SineAR', null, 'sinear')">
+            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'SineAR', null, 'sine-ar')">
                 <div class="projecttext">SineAR</div>
                 <img class="projectimage" src="projects/sine_ar.gif">
             </div>            
         </div>
 
         <div class="galleryrow" id="portrait">
-            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Holo Brawl VR', null, 'holobrawl')">
+            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Ray Tracer', null, 'ray-tracer')">
                 <div class="projecttext">Ray Tracer</div>
                 <img class="projectimage" src="projects/lights and balls cropped.jpg">
             </div>            
-            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Holo Brawl VR', null, 'holobrawl')">
+            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Shaders', null, 'shaders')">
                 <div class="projecttext">Shaders</div>
                 <img class="projectimage" src="projects/shader/rainbow.gif">
             </div>   
         </div>
 
         <div class="galleryrow" id="portrait">
-            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Holo Brawl VR', null, 'holobrawl')">
+            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Tree Generation', null, 'tree-generation')">
                 <div class="projecttext">Tree Generation</div>
                 <img class="projectimage" src="projects/tree_generation.png">
             </div>            
-            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Holo Brawl VR', null, 'holobrawl')">
+            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Insect Garden', null, 'insect-garden')">
                 <div class="projecttext">Insect Garden</div>
                 <img class="projectimage" src="projects/insects/bug_26.jpg">
             </div>   
-            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Holo Brawl VR', null, 'holobrawl')">
+            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Walter Model & Rig', null, 'walter')">
                 <div class="projecttext">Walter Model & Rig</div>
                 <img class="projectimage" src="projects/model_rig.jpg">
             </div>   
         </div>
 
         <div class="galleryrow" id="portrait">
-            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Holo Brawl VR', null, 'holobrawl')">
+            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Human Spaceflight and Vision Empairment Poster', null, 'spaceflight')">
                 <div class="projecttext">Human Spaceflight and Vision Empairment Poster</div>
                 <img class="projectimage" src="projects/payload_picture.png">
             </div>            
-            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Holo Brawl VR', null, 'holobrawl')">
+            <div class="galleryproject" onclick="openModal(event, 'projectModal', 'Sketch Sage Studio', null, 'sketchsage')">
                 <div class="projecttext">Sketch Sage Studio</div>
                 <img class="projectimage" src="projects/sketchsage.png">
             </div>   
