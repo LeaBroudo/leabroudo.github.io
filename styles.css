@@ -111,6 +111,11 @@ h3.navlink:hover {
     width: 170px;
 }
 
+.modalimagelong {
+    margin: 10px;
+    height: 150px;
+}
+
 .galleryimagelong {
     margin: 10px;
     width: 200px;
