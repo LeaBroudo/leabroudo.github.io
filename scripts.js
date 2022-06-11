@@ -105,9 +105,10 @@ function openModal(event, modalId, title, picture, meatId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "block";
 
-  if (event?.path[0]?.id) {
+  var idToUse = event?.path[0]?.id || event?.path[1]?.id || null;
+  if (idToUse) {
     params = new URLSearchParams(location.search);
-    params.set('focus', event.path[0].id);
+    params.set('focus', idToUse);
     window.history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
   }
   
