@@ -151,6 +151,8 @@ window.onclick = function(event) {
       currentModalMeat.style.display = "none";
       currentModalMeat = null;
     }
+
+    document.body.style.overflow = 'scroll';
   }
 }
 
