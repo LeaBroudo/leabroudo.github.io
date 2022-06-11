@@ -177,13 +177,13 @@ h3.navlink:hover {
     transform: rotate(-0.5deg);
 }
 
-p.contactlink {
+.contactlink {
     transition: transform .1s ease-in-out;
     transform-origin: bottom left;
     font-weight: bold;
 }
 
-p.contactlink:hover {
+.contactlink:hover {
     transform: rotate(-0.2deg);
 }
 
