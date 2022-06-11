@@ -102,10 +102,16 @@ function setFavicon(pageName) {
 }
 
 // When the user clicks the button, open the modal 
-function openModal(evt, modalId, title, picture, meatId) {
+function openModal(event, modalId, title, picture, meatId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "block";
 
+  if (event?.path[0]?.id) {
+    params = new URLSearchParams(location.search);
+    params.set('focus', event.path[0].id);
+    window.history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
+  }
+  
   var modalContent = modal.querySelector('.modal-content');
   modalContent.scrollTop = 0;
 
