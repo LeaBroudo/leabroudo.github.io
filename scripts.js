@@ -49,9 +49,8 @@ function getPageFromQueryParams() {
 
 function getFocusFromQueryParams() {
   const urlParams = new URLSearchParams(window.location.search);
-  var focus = urlParams.get('focus')?.toLowerCase();
+  var focus = urlParams.get('focus');
   elementToGetFocusFrom = document.getElementById(focus);
-  
   if (elementToGetFocusFrom) {
     elementToGetFocusFrom.onclick();
   }
@@ -183,9 +182,15 @@ window.onclick = function(event) {
 var currentModal = null;
 var currentModalImage = null;
 var currentModalMeat = null;
+
+// Switch page
 var currentPage = getPageFromQueryParams();
 switchPage(document.getElementById(currentPage.toLowerCase()+'page'), currentPage);
-getFocusFromQueryParams();
+
+// Switch between desktop and mobile view
 var x = window.matchMedia("(max-width: 545px)")
 viewportStylingChange(x) // Call listener function at run time
 x.addListener(viewportStylingChange) // Attach listener function on state changes
+
+// Open modal 
+getFocusFromQueryParams();
