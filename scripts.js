@@ -47,6 +47,16 @@ function getPageFromQueryParams() {
   
 }
 
+function getFocusFromQueryParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  var focus = urlParams.get('focus')?.toLowerCase();
+  elementToGetFocusFrom = document.getElementById(focus);
+  
+  if (elementToGetFocusFrom) {
+    elementToGetFocusFrom.onclick();
+  }
+}
+
 function viewportStylingChange(x) {
   var linkContainer = document.getElementsByClassName('links')[0];
   var linkParent = linkContainer.parentNode;
@@ -137,6 +147,10 @@ function closeModal(evt) {
     currentModalMeat = null;
   }
 
+  params = new URLSearchParams(location.search);
+  params.delete('focus');
+  window.history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
+
   document.body.style.overflow = 'scroll';
 }
 
@@ -152,6 +166,10 @@ window.onclick = function(event) {
       currentModalMeat = null;
     }
 
+    params = new URLSearchParams(location.search);
+    params.delete('focus');
+    window.history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
+
     document.body.style.overflow = 'scroll';
   }
 }
@@ -161,7 +179,7 @@ var currentModalImage = null;
 var currentModalMeat = null;
 var currentPage = getPageFromQueryParams();
 switchPage(document.getElementById(currentPage.toLowerCase()+'page'), currentPage);
-
+getFocusFromQueryParams();
 var x = window.matchMedia("(max-width: 545px)")
 viewportStylingChange(x) // Call listener function at run time
 x.addListener(viewportStylingChange) // Attach listener function on state changes
