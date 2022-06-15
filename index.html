@@ -41,16 +41,17 @@
         <div class="info easyreading">
                 <p>
                     Hello! Welcome to  <i>Lea's World</i>. I first built this site so that others could learn more about me,
-                    but I like to also keep it as a personal record of what I've made over the years.
+                    but I also like to keep it as a personal record of what I've made over the years.
                 </p>
                 <p>
-                    Before I let you look at my work since highschool, let me first introduce myself. 
+                    Before I let you look at my work since highschool, first let me introduce myself. 
                     I'm Lea Broudo, a software engineer from New York. I've worked on a range of projects,
                     some of which I've included on this site. 
                 </p>
                 <p>
                     Some more background...
                 </p>
+                
                 <p>
                     Between 2014 and 2018 I mainly taught myself to draw portraits, since I was interested in
                     being able to capture people's likeness. After portraits, I began to
@@ -76,9 +77,16 @@
         <img class="pageimage" src="computer.gif"/>
         <div class='date-time'><span></span>.</div>
         <div class="divider">*</div>
-        <p class="easyreading">
-            I build things for a living
-        </p>
+        <div class="info easyreading">
+            <p>
+                These are the projects I've worked on since 2017. They are ordered (for the most part) from newest to oldest.
+            </p>
+            <p>
+                The latest projects are all AR and VR related and built in Unity. Before then, I worked on some GLSL shaders and a ray tracer, 
+                as well as some python tools I wrote for Maya to help generate different 3D models. My oldest projects are from when I was still 
+                a mechanical engineering major in college, and include a portable Dance Dance Revolution machine and an experiment that went into microgravity. 
+            </p>
+        </div>
 
         <!-- The Modal -->
         <div id="projectModal" class="modal">
@@ -93,7 +101,7 @@
                     <!-- Holo Brawl -->
                     <div class="modal-meat" id="holo-brawl">
                         <p>
-                            HoloBrawl is a VR board game that allows players to personally interact with their pieces. 
+                            HoloBrawl is a VR board game where players can personally interact with their pieces. 
                             Pieces squirm when picked up, and have personalities of their own! The objective of the game 
                             is to kill all of your AI opponent’s pieces before they kill yours. 
                         </p>
@@ -101,27 +109,20 @@
                             Players must move their 
                             pieces to an opponent’s tile to attack them. Each piece has an attack and defense score, and 
                             if the difference between the attacker’s attack score and the defense’s defense score is big 
-                            enough, with a bit of chance the attacker will kill the defense piece. Given different pairings 
-                            of these scores, pieces can also be counter-killed or pushed to a new tile.
+                            enough, with a bit of chance the attacker will kill the defense piece.
                         </p>
-                        <div class="galleryrow"> 
-                            <div class="modal-video-item">
-                                <video class="modal-video" muted autoplay controls loop>
-                                    <source src="projects/holobrawl/HoloBrawlAlphaUI.mp4" type="video/mp4">
-                                </video>
-                                <p class="modal-item-info">
-                                    User Interface
-                                </p>
-                            </div>
-                            <div class="modal-video-item">
-                                <video class="modal-video" muted autoplay controls loop>
-                                    <source src="projects/holobrawl/HoloBrawlAlphaGameplay.mp4" type="video/mp4">
-                                </video>
-                                <p class="modal-item-info">
-                                    Gameplay
-                                </p>
-                            </div>
-                        </div>
+                        <p>
+                            I built this entirely in Unity using the OpenXR and Oculus SDK's. I used hand tracking as the primary 
+                            interaction mechanism so that the environment and placing pieces would feel more natural. 
+                            I made many portions of the 
+                            user's world physics-based as well to aid in the realism. The game pieces were made using PuppetMaster
+                            so that they could be guided by animations while also acting as ragdolls when responding to user interaction. 
+
+                        </p>
+                        <p>
+                            I'm still working on this project as of June 2022, and was recently accepted to the Oculus Start Program
+                            to help me continue development. 
+                        </p>
                         <div class="galleryrow">
                             <div class="modal-item">
                                 <img class="modalimage" src="projects/holobrawl/using-ui.png" />
@@ -154,18 +155,44 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="galleryrow"> 
+                            <div class="modal-video-item">
+                                <video class="modal-video" muted autoplay controls loop>
+                                    <source src="projects/holobrawl/HoloBrawlAlphaUI.mp4" type="video/mp4">
+                                </video>
+                                <p class="modal-item-info">
+                                    User Interface
+                                </p>
+                            </div>
+                            <div class="modal-video-item">
+                                <video class="modal-video" muted autoplay controls loop>
+                                    <source src="projects/holobrawl/HoloBrawlAlphaGameplay.mp4" type="video/mp4">
+                                </video>
+                                <p class="modal-item-info">
+                                    Gameplay
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <!-- CURVE -->
                     <div class="modal-meat" id="curve">
                         <p>
                             I worked at Columbia University's Computer Graphics and User Interfaces (CGUI) 
-                            Lab on a Collaborative Urban Virtual Environment under Professor Steven Feiner 
+                            Lab on this Collaborative Urban Virtual Environment (CURVE) under Professor Steven Feiner 
                             and lead Doctoral researchers. The project is used for 3D urban data visualization 
                             in VR, allowing users to select infrastructure to examine, filter, and expand data. 
-                            I further developed the Unity framework with SteamVR and the Mapbox API to research 
-                            the interactions of multiple users within a virtual representation of NYC. I also 
+                        </p>
+                        <p>
+                            I further developed the project in Unity using SteamVR, and build the pinboards in the images below. 
+                            The pinboards feature a number of different affordances, including allowing the user to bookmark 
+                            different data placards, organize the placards discretely or messily, filter them according
+                            to a numer of characteristics, and link nearby or similar placards together. 
+                        </p>
+                        <p>
+                            I also migrated the code to use the Mapbox API to better research 
+                            the interactions of multiple users inside a virtual representation of NYC. I also 
                             implemented an exclusively Desktop interface so that users without head-worn displays 
-                            or hand-held mobile devices during the pandemic could still use CURVE.
+                            or hand-held mobile devices during the COVID-19 pandemic could still use CURVE.
                         </p>
                         <div class="galleryrow" id="portrait">
                             <div class="modal-item">
@@ -494,16 +521,16 @@
 
         <div class="easyreading info">
             <p>
-                Most of these portraits I drew between 2014 and 2018. 
-            </p>
-            <p>
-                The first pieces in each section, <i>A  Waltz with the Cosmos</i> and
-                <i>Remote (not in) Control</i>, were displayed in the Rubell Family 
-                Collection Gallery in Miami. 
+                I drew between most of these portraits between 2014 and 2018. 
             </p>
             <p>
                 I won the Congressional Art Award for the second piece below, 
                 <i>Head in the Clouds</i>, which was displayed in the U.S. Capitol for a year.
+            </p>
+            <p>
+                The first piece in the Portraits section, <i>A  Waltz with the Cosmos</i>, 
+                and the first piece in the Surreal section, <i>Remote (not in) Control</i>, 
+                were displayed in the Rubell Family Collection Gallery in Miami. 
             </p>
         </div>
 
