@@ -83,7 +83,7 @@
             </p>
             <p>
                 The latest projects are all AR and VR related and built in Unity. Before then, I worked on some GLSL shaders and a ray tracer, 
-                as well as some python tools I wrote for Maya to help generate different 3D models. My oldest projects are from when I was still 
+                as well as some Python tools I wrote for Maya to help generate different 3D models. My oldest projects are from when I was still 
                 a mechanical engineering major in college, and include a portable Dance Dance Revolution machine and an experiment that went into microgravity. 
             </p>
         </div>
@@ -107,16 +107,17 @@
                         </p>
                         <p>
                             Players must move their 
-                            pieces to an opponent’s tile to attack them. Each piece has an attack and defense score, and 
+                            piece to an opponent’s tile to attack them. Each piece has an attack and defense score, and 
                             if the difference between the attacker’s attack score and the defense’s defense score is big 
-                            enough, with a bit of chance the attacker will kill the defense piece.
+                            enough, with a bit of chance the attacker will kill the defense piece. Given different pairings 
+                            of these scores, pieces can also be counter-killed or pushed to a new tile.
                         </p>
                         <p>
                             I built this entirely in Unity using the OpenXR and Oculus SDK's. I used hand tracking as the primary 
-                            interaction mechanism so that the environment and placing pieces would feel more natural. 
-                            I made many portions of the 
-                            user's world physics-based as well to aid in the realism. The game pieces were made using PuppetMaster
-                            so that they could be guided by animations while also acting as ragdolls when responding to user interaction. 
+                            interaction mechanism so that the environment and feeling of placing pieces would seem more natural. 
+                            I also made many portions of the 
+                            user's world physics-based to aid in the realism. The game pieces were made using Pärtel Lang's PuppetMaster. This
+                            allowed them to act as ragdolls when responding to user interaction, but be guided by animations otherwise. 
 
                         </p>
                         <p>
@@ -178,21 +179,21 @@
                     <div class="modal-meat" id="curve">
                         <p>
                             I worked at Columbia University's Computer Graphics and User Interfaces (CGUI) 
-                            Lab on this Collaborative Urban Virtual Environment (CURVE) under Professor Steven Feiner 
-                            and lead Doctoral researchers. The project is used for 3D urban data visualization 
-                            in VR, allowing users to select infrastructure to examine, filter, and expand data. 
+                            Lab on this project under Professor Steven Feiner and lead doctoral researchers. 
+                            The project, Collaborative Urban Virtual Environment (CURVE), is used for 3D urban data visualization 
+                            in VR. 
                         </p>
                         <p>
-                            I further developed the project in Unity using SteamVR, and build the pinboards in the images below. 
-                            The pinboards feature a number of different affordances, including allowing the user to bookmark 
-                            different data placards, organize the placards discretely or messily, filter them according
-                            to a numer of characteristics, and link nearby or similar placards together. 
+                            I further developed the project in Unity using SteamVR, and build the pinboards and data placards in the images below. 
+                            The pinboards afford a number of different abilities, including the bookmarking of
+                            different data placards, automatic organization of placards discretely or continuously, placard filtering according
+                            to a numer of different criteria, and the tethering of nearby or similar placards. 
                         </p>
                         <p>
-                            I also migrated the code to use the Mapbox API to better research 
-                            the interactions of multiple users inside a virtual representation of NYC. I also 
-                            implemented an exclusively Desktop interface so that users without head-worn displays 
-                            or hand-held mobile devices during the COVID-19 pandemic could still use CURVE.
+                            I also migrated the code to use the Mapbox API, which allowed us to better research 
+                            the interactions of multiple users inside a virtual representation of NYC. In addition, I
+                            implemented an exclusively desktop interface so that users without head-worn displays 
+                            could still use CURVE during the COVID-19 pandemic.
                         </p>
                         <div class="galleryrow" id="portrait">
                             <div class="modal-item">
@@ -210,7 +211,7 @@
                             <div class="modal-item">
                                 <img class="modalimagelong" src="projects/curve/pinboard.gif" />
                                 <p class="modal-item-info">
-                                    Moving placards around the <i>Continuous</i> pinboard
+                                    Moving tethered placards around the <i>Continuous</i> pinboard
                                 </p>
                             </div>
                             <div class="modal-item">
@@ -233,11 +234,11 @@
                     <!-- SineAR -->
                     <div class="modal-meat" id="sine-ar">
                         <p>
-                            Along with two classmates using Unity and Vuforia I developed sineAR, 
-                            an augmented reality app that allows users to learn about acoustic waves 
-                            through creating and modifying spatial audio ensembles. With step-by-step 
+                            SineAR is an augmented reality app that allows users to learn about 
+                            acoustic waves by creating and modifying spatial audio ensembles. I developed 
+                            sineAR with two other classmates using Unity and Vuforia.  With step-by-step 
                             tutorials and multiple methods of interaction, users quickly and immersively 
-                            create sounds in their AR environment and experience how modifying frequency 
+                            create sounds in their AR environment. Users experience how modifying frequency 
                             and amplitude leads to an interesting new world of sound.
                         </p>
                         <div class="galleryrow"> 
@@ -252,8 +253,8 @@
                     <!-- Ray Tracer -->
                     <div class="modal-meat" id="ray-tracer">
                         <p>
-                            This is a Raytracer I wrote that uses BRDF calculations to render images. 
-                            Implemented recursive reflections, depth of field, and shadows from scratch.
+                            This is a ray tracer I wrote in C++ that uses BRDF calculations to render images,
+                            and includes features like recursive reflections, depth of field, and shadows.
                         </p>
                         <div class="modal-item">
                             <img class="modalimage" style="width:250px" src="projects/raytracer/lights and balls.jpg" />
@@ -268,9 +269,8 @@
                     <!-- Shaders -->
                     <div class="modal-meat" id="shaders">
                         <p>
-                            A number of GLSL shaders I implemented, including: Phong, Gouraud, texture 
-                            modulation, normal mapping, checkerboard pattern, cel (toon), and a more 
-                            creative rainbow shader!
+                            These are a number of GLSL shaders I implemented. They include: Phong, Gouraud, texture 
+                            modulation, normal mapping, a checkerboard pattern, cel (toon), and a fun rainbow shader!
                         </p>
                         <div class="galleryrow">
                             <div class="modal-item">
@@ -322,7 +322,7 @@
                         <p>
                             This is a plugin I wrote for Maya that allows users to create meshes of different types of insects. 
                             These insects are created either randomly or according to user-specified input in a slider menu. 
-                            The tool was written in Python using Maya's API, and the final insects were rendered in Arnold.                       
+                            The tool was written in Python using the Maya API, and the final insects were rendered in Arnold.                       
                         </p>
                         <div class="galleryrow">
                             <div class="modal-item">
@@ -345,14 +345,14 @@
                     <!-- Tree Generation -->
                     <div class="modal-meat" id="tree-generation">
                         <p>
-                            In this project, I was interested in creating a Maya Plugin that let users 
-                            easily create different types of trees. In order to generate trees that looked 
+                            In this project, I was interested in creating a Maya plugin that lets users 
+                            easily generate different types of trees. In order to generate trees that looked 
                             realistic, I used procedural L-systems with stochastic sampling. Users can input 
                             their own seeds to create even more varied trees, and they can also control 
                             parameters like branch tapering, leaf and flower density, and mesh texturing. 
                         </p>
                         <p>
-                            The tool was written in Python for Maya, and the final trees were rendered in Arnold. 
+                            The tool was written in Python using the Maya API, and the final trees were rendered in Arnold. 
                         </p>
                         <div class="galleryrow">
                             <iframe class="modal-video" src="https://www.youtube.com/embed/_0jiqx5bpeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" muted autoplay allowfullscreen></iframe>
@@ -361,10 +361,10 @@
                     <!-- Walter -->
                     <div class="modal-meat" id="walter">
                         <p>
-                            This is a character I modeled in Maya and textured using Substance Painter.  
-                            I was responsible for the concept and design of the character. The character also 
-                            has a fully functional rig with full IK/FK functionality for the arms, legs, and spine. 
-                            The walk cycle animation was also done be me, with the final scene rendered in Arnold.
+                            This is a character I modeled in Maya and textured in Substance Painter. 
+                            I dubbed the model "Walter", and was responsible for the concept and design. The character also 
+                            has a fully functional rig with both inverse and forward kinematic functionality for the arms, legs, and spine. 
+                            I also animated the walk cycle myself, and rendered the final scene in Arnold.
                         </p>
                         <div class="galleryrow">
                             <iframe class="modal-video" src="https://www.youtube.com/embed/M-Oz2VAiVOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" muted autoplay allowfullscreen></iframe>
@@ -374,12 +374,12 @@
                     <div class="modal-meat" id="sketchsage">
                         <p>
                             For this project, I wanted to create a tool that gave artists a realistic 
-                            figure model to use for sketching or illustration. I thought it was time 
+                            figure model to use for sketching and illustration. I thought it was time 
                             for an upgrade from those old-school wooden models, so Sketch Sage was born. 
                         </p>
                         <p>
                             The UI was developed using plain JavaScript and HTML/CSS, and the graphics 
-                            were all made using THREE.js. After the desktop and mobile versions were completed 
+                            were all made using Three.js. After the desktop and mobile versions were completed 
                             in July 2019, the site gained over 1,500 active users in its first four months. 
                         </p>
                         <div class="galleryrow">
@@ -390,12 +390,12 @@
                     <div class="modal-meat" id="electric-slide">
                         <p>
                             My friends and I built this Dance Dance Revolution hand-held game completely from scratch. 
-                            I used SolidWorks to CAD the container, and we laser-cut acrylic boards to create the shape. 
-                            We used an arduino to power the game, and we created the logic and wired it up completely on our own. 
+                            I used SolidWorks to CAD the container, and we laser-cut acrylic boards to create the physical shape. 
+                            We used an Arduino to power the game, so we wrote the logic in C++ and wired it up completely on our own. 
                         </p>
                         <p>
-                            It was suprisingly fun to play, but insanely hard since you'd lose a ridiculous amount of points
-                            when you didn't hit the button at the right time. Overall, a fun project to work on. 
+                            It was suprisingly fun to play, but extremely difficult since players lose points if a button is hit
+                            even a microsecond too late or early. But overall, it was a fun project to work on. 
                         </p>
                         <div class="galleryrow">
                             <div class="modal-item">
@@ -423,15 +423,36 @@
                     <!-- Spaceflight -->
                     <div class="modal-meat" id="space-flight">
                         <p>
-                            Stuff about space
+                            Human spaceflight has been shown time and again to impose a variety of negative effects on the body. 
+                            Looking specifically at eye function, about 30% of astronauts on short-term flights and 60% on 
+                            long-duration missions to the ISS have reported impairment to their vision. 
                         </p>
-                        <div class="modal-item">
-                            <img class="modalimage" style="width:300px;" src="projects/PosterPicture.jpg" />
+                        <p>
+                            Building off previous 
+                            studies identifying cellular disorganization and deterioration after simulated microgravity, 
+                            this project aimed to further explore the effects of true short-term microgravity exposure on eye 
+                            tissue and retinal glial cells. The cells were exposed to microgravity 
+                            for several minutes during a Blue Origin New Shepard flight.
+                        </p>
+                        <p>
+                            I helped design an automatic payload to house cultured cells and inject a solution of RNA stabilizing solution at two time-points immediately before and after microgravity exposure.
+                            All parts were 3D printed in PLA except the outside shell which was aluminum sheet metal with CNC machined holes. Material was removed based upon topology simulations to produce highest strength to weight ratio.
+                            Two linear actuators were used to push fluid into six cell cultures. These cell cultures were housed in a 3D printed container filled with aerogel to minimize heat loss from the system.
+                        </p>
+                       
+                        <div class="galleryrow">
+                            <div class="modal-item">
+                                <img class="modalimage" style="width:300px;margin-top:40px;" src="projects/payload_picture.png" />
+                            </div>
+                            <div class="modal-item">
+                                <img class="modalimage" style="width:100px;margin-top:38px;" src="projects/experiment_cells.jpg" />
+                            </div>
                         </div>
                         <div class="modal-item">
-                            <img class="modalimage" style="width:300px;margin-top:60px;" src="projects/payload_picture.png" />
+                            <img class="modalimage" style="width:300px;margin-bottom:40px;" src="projects/PosterPicture.jpg" />
                         </div>
                     </div>
+                    <!-- Babylonian stuff!!! -->
                 </div>
             </div>
         </div>
@@ -467,14 +488,14 @@
                 <div class="projecttext">Ray Tracer</div>
                 <img class="projectimage" src="projects/raytracer/lights and balls cropped.jpg">
                 <p class="easyreading projectinfo">
-                    Ray tracer in C. 
+                    Ray tracer written in C++. 
                 </p>
             </div>            
             <div class="galleryproject" id="Shaders" onclick="openModal(event, 'projectModal', 'Shaders', null, 'shaders')">
                 <div class="projecttext">Shaders</div>
                 <img class="projectimage" src="projects/shader/rainbow.gif">
                 <p class="easyreading projectinfo">
-                    (Adorable) GLSL shaders
+                    (Adorable) GLSL shaders.
                 </p>
             </div>   
         </div>
@@ -483,14 +504,23 @@
             <div class="galleryproject" id="Tree-Generation" onclick="openModal(event, 'projectModal', 'Tree Generation', null, 'tree-generation')">
                 <div class="projecttext">Tree Generation</div>
                 <img class="projectimage" src="projects/tree_generation.png">
+                <p class="easyreading projectinfo">
+                    Maya plugin to quickly generate complex tree models.
+                </p>
             </div>            
             <div class="galleryproject" id="Insect-Garden" onclick="openModal(event, 'projectModal', 'Insect Garden', null, 'insect-garden')">
                 <div class="projecttext">Insect Garden</div>
                 <img class="projectimage" src="projects/insects/bug_26.jpg">
+                <p class="easyreading projectinfo">
+                    Maya plugin to easily generate a variety of insect models.
+                </p>
             </div>   
             <div class="galleryproject" id="Walter" onclick="openModal(event, 'projectModal', 'Walter Model & Rig', null, 'walter')">
                 <div class="projecttext">Walter Model & Rig</div>
                 <img class="projectimage" src="projects/model_rig.jpg">
+                <p class="easyreading projectinfo">
+                    3D model, rig, and walk cycle created in Maya and rendered in Arnold.
+                </p>
             </div>   
         </div>
 
@@ -498,6 +528,9 @@
             <div class="galleryproject" id="Sketch-Sage" onclick="openModal(event, 'projectModal', 'Sketch Sage Studio', null, 'sketchsage')">
                 <div class="projecttext">Sketch Sage Studio</div>
                 <img class="projectimage" src="projects/sketchsage.png">
+                <p class="easyreading projectinfo">
+                    Realistic, poseable online figure model to use for sketching and illustration.
+                </p>
             </div>   
         </div>
 
@@ -505,12 +538,20 @@
             <div class="galleryproject" id="Human-Spaceflight" onclick="openModal(event, 'projectModal', 'Human Spaceflight and Vision Empairment Poster', null, 'space-flight')">
                 <div class="projecttext">Human Spaceflight and Vision Empairment Poster</div>
                 <img class="projectimage" src="projects/payload_picture.png">
+                <p class="easyreading projectinfo">
+                    Retinal cell experiment sent into microgravity. 
+                </p>
             </div>  
             <div class="galleryproject" id="Electric-Slide" onclick="openModal(event, 'projectModal', 'The Electric Slide', null, 'electric-slide')">
                 <div class="projecttext">The Electric Slide</div>
                 <img class="projectimage" src="projects/electricslide/shot_2.png">
+                <p class="easyreading projectinfo">
+                    Hand-held Dance Dance Revolution game made with Arduino. 
+                </p>
             </div>  
         </div>
+
+        <!-- Babylonian stuff!!! -->
     </div>
 
     <div id="Artwork" class="page">
