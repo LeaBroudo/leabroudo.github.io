@@ -38,36 +38,91 @@
         <div class='date-time'><span></span>.</div>
         <div class="divider">*</div>
         <!--WHAT if I just put a timeline like linked in?-->
-        <div class="info easyreading">
-                <p>
-                    Hello! Welcome to  <i>Lea's World</i>. I first built this site so that others could learn more about me,
+        <div class="info">
+                <p class="easyreading">
+                    Hello! Welcome to  my website. I first built this site so that others could learn more about me,
                     but I also like to keep it as a personal record of what I've made over the years.
                 </p>
-                <p>
+                <p class="easyreading">
                     Before I let you look at my work since highschool, first let me introduce myself. 
-                    I'm Lea Broudo, a software engineer from New York. I've worked on a range of projects,
-                    some of which I've included on this site. 
+                    I'm Lea Broudo, a software engineer and artist from New York. I've worked on a range of projects,
+                    most of which I've included on this site. 
                 </p>
-                <p>
-                    Some more background...
+                <p class="easyreading">
+                    Here's a brief timeline of the different areas I've explored over the years:
                 </p>
-                
-                <p>
-                    Between 2014 and 2018 I mainly taught myself to draw portraits, since I was interested in
-                    being able to capture people's likeness. After portraits, I began to
-                    work on larger and more surreal scenes, as well as branch off into other mediums like
-                    embroidery and pottery. You can check out some of my work here. 
-                </p>
-                <p>
-                    While pursuing my undergrad at Columbia I learned to program, but realized
-                    I could continue art within engineering. I specialized in computer graphics and vision, 
-                    and worked on VR projects at Steven Feiner's Computer Graphics and User Interfaces Lab.  
-                    
-                </p>
-                <p>
-                    Since then, I've been working on an Oculus Quest game, Holo Brawl, through the Oculus Start Program.   
-                    
-                </p>
+
+
+                <div class="timeline-container">
+                    <div class="timeline-block timeline-block-right">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>software engineering and XR development</h3>
+                            <span>2020-present</span>
+                            <p>
+                                I joined the Computer Graphics and User Interfaces lab under Professor Steven Feiner, 
+                                and have been obsessed with AR & VR development ever since. While there I worked mainly on a 
+                                collaborative urban virtual environment using SteamVR. Since then I've been working on
+                                my own Oculus Quest game, Holo Brawl, through the Oculus Start Program. You can view some of my projects 
+                                <a href="index.html?page=Projects" class="easylink">here</a>.
+                            </p>
+                            <p>
+                                Otherwise, I'm currently working at <a href="http://www.zocdoc.com" target="_blank" class="easylink">Zocdoc</a>  as a software engineer 
+                                on the Video Visits and Intake team. If you're in the market for a new doctor, I highly recommend you visit them!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-block timeline-block-left">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>computer graphics development</h3>
+                            <span>2019-20</span>
+                            <p>
+                                After a few years, I missed the artistic aspect of my work that I felt mechanical engineering lacked. I jumped ship
+                                and became a computer science major with a focus on computer graphics and vision. Around then I worked
+                                on different shaders, a ray tracer, and custom Maya object generation tools. Check my work out
+                                <a href="index.html?page=Projects" class="easylink">here</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-block timeline-block-right">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>mechanical engineering</h3>
+                            <span>2017-19</span>
+                            <p>
+                                At the beginning of University, I was a mechanical engineering major. During that time, I enjoyed designing parts
+                                in SolidWorks and either 3D printing or laser-cutting the final form. Some of my most thorough creations from then include
+                                an experiment that went into microgravity and a portable Dance Dance Revolution machine. You can check them out
+                                <a href="index.html?page=Projects" class="easylink">here</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-block timeline-block-left">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>surrealism, embroidery, & pottery</h3>
+                            <span>2016-18</span>
+                            <p>
+                                After portraits, I began to
+                                work on larger and more surreal scenes, as well as branch off into other mediums like
+                                embroidery and pottery. You can check out some of my work <a href="index.html?page=Artwork" class="easylink">here</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-block timeline-block-right">
+                        <div class="marker"></div>
+                        <div class="timeline-content">
+                            <h3>portrait art</h3>
+                            <span>2014-16</span>
+                            <p>
+                                I was interested in being able to capture people's likeness, 
+                                so during this time I taught myself to draw portraits. I mainly used colored pencils on toned tan paper.
+                                You can check out some of my work <a href="index.html?page=Artwork" class="easylink">here</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
         </div>
 
     </div>
@@ -390,7 +445,7 @@
                     <div class="modal-meat" id="electric-slide">
                         <p>
                             My friends and I built this Dance Dance Revolution hand-held game completely from scratch. 
-                            I used SolidWorks to CAD the container, and we laser-cut acrylic boards to create the physical shape. 
+                            I used SolidWorks to design the container, and we laser-cut acrylic boards to create the physical shape. 
                             We used an Arduino to power the game, so we wrote the logic in C++ and wired it up completely on our own. 
                         </p>
                         <p>
@@ -603,8 +658,11 @@
                 </div>
                 <div class="galleryrow" id="portrait">
                     <img class="galleryimage" id="Breeze-By" src="artwork/baby rainbow.jpeg" onclick="openModal(event, 'artModal', 'Breeze By', 'artwork/baby rainbow.jpeg')"/>
-                    <img class="galleryimage" id="The-Wrath-of-Laplaces-Demon" src="artwork/The Wrath of Laplaces Demon.jpeg" onclick="openModal(event, 'artModal', 'The Wrath of Laplace\&apos;s Demon', 'artwork/The Wrath of Laplaces Demon.jpeg')"/>
+                    <img class="galleryimage" id="Alexis-Stone" src="artwork/alexis_stone.JPG" onclick="openModal(event, 'artModal', 'Alexis Stone', 'artwork/alexis_stone.JPG')"/>
                     <img class="galleryimage" id="Wavetrain" src="artwork/Wavetrain.jpeg" onclick="openModal(event, 'artModal', 'Wavetrain', 'artwork/Wavetrain.jpeg')"/>
+                </div>
+                <div class="galleryrow" id="portrait">
+                    <img class="galleryimage" id="The-Wrath-of-Laplaces-Demon" src="artwork/The Wrath of Laplaces Demon.jpeg" onclick="openModal(event, 'artModal', 'The Wrath of Laplace\&apos;s Demon', 'artwork/The Wrath of Laplaces Demon.jpeg')"/>
                 </div>
             </div>
 
