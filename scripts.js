@@ -15,13 +15,14 @@ function switchPage(evt, pageName) {
 
     document.getElementById(pageName).style.display = "block";
     currentPage = pageName;
+    
 
     params = new URLSearchParams(location.search);
     params.set('page', pageName);
     window.history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
 
     //setFavicon(pageName);
-
+    window.scrollTo(0, 0);
     updateClock();
 }
 

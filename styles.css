@@ -396,17 +396,17 @@ h3.navlink:hover {
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -1px;
-    width: 2px;
+    margin-left: -0.5px;
+    width: 1px;
     height: 100%;
     background-image: linear-gradient(black, white 2%, white 98%, black 100%);
     z-index: -1; /* so it sits behind .marker */
  }
  
  .timeline-block {
-    width: -webkit-calc(50% + 6.5px);
-    width: -moz-calc(50% + 6.5px);
-    width: calc(50% + 6.5px);
+    width: -webkit-calc(50% + 5.5px);
+    width: -moz-calc(50% + 5.5px);
+    width: calc(50% + 5.5px);
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -431,9 +431,9 @@ h3.navlink:hover {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 1px solid white;
     background-color: black;
-    margin-top: 10px;
+    margin-top: 16px;
  }
  
  .timeline-content {
