@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;600&display=swap');
 
 body {
     background-color: black;
@@ -222,6 +222,7 @@ h3.navlink:hover {
     cursor: pointer;
     display: inline-block;
     font-style: italic;
+    font-weight: 600;
 }
 
 .easylink:hover {
