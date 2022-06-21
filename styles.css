@@ -483,5 +483,9 @@ h3.navlink:hover {
        float: none;
        direction: ltr;
     }
+
+    .marker {
+        margin-left: 1px;
+    }
  }
  
