@@ -106,6 +106,14 @@ function openModal(event, modalId, title, picture, meatId) {
   var modal = document.getElementById(modalId);
   modal.style.display = "block";
 
+  // Trigger a refresh so the fade in animations can replay
+  // resetting the name also clears the animation class hich we add back later
+  void modal.offsetWidth;
+  modal.className = 'modal';
+  modalContent = modal.querySelector('.modal-content');
+  void modalContent.offsetWidth;
+  modalContent.className = 'modal-content';
+
   // Id to make the query param for modal
   var idToUse = null;
   if (event && event.path && (event.path[0] || event.path[1])) {
@@ -118,8 +126,7 @@ function openModal(event, modalId, title, picture, meatId) {
     window.history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
   }
   
-  var modalContent = modal.querySelector('.modal-content');
-  modalContent.scrollTop = 0;
+  
 
   var modalBody = modalContent.querySelector('.modal-body');
   if (modalBody) {
@@ -142,6 +149,12 @@ function openModal(event, modalId, title, picture, meatId) {
     currentModalMeat = document.getElementById(meatId);
     currentModalMeat.style.display = "block";
   }
+
+  // Trigger a refresh again so the fade in animations can replay
+  void modal.offsetWidth;
+  void modalContent.offsetWidth;
+  modal.className += ' modal-animation';
+  modalContent.className += ' modal-content-animation';
   
   document.body.style.overflow = 'hidden';
   currentModal = modal;
