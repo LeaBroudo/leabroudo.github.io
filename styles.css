@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;600&display=swap');
+
+body {
+    background-color: black;
+    font-family: 'IM Fell Great Primer', serif;
+    letter-spacing: 2px;
+    color: white;
+    margin: 0;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 30px;
+    padding-bottom: 10px;
+}
+
+.title {
+    width: 450px;
+    margin-right: 10px;
+}
+
+.name {
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin: 0px;
+}
+
+.subtitle {
+    margin-top: 5px;
+}
+
+.links {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.linkParentMobile {
+    position:fixed; 
+    bottom: 0; 
+    width: 100%;
+    background-color: black;
+}
+
+.navlink {
+    margin-left: 10px;
+    margin-right: 10px;  
+    cursor: pointer; 
+}
+
+h3.navlink{
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
+}
+
+h3.navlink:hover {
+    transform: rotate(-3deg);
+}
+
+.greeting {
+    font-size: 30px;
+    margin: 10px;
+}
+
+.page {
+    padding: 30px;
+    padding-top: 0px;
+    text-align: center;
+    display: none;
+    margin-bottom: 60px;
+}
+
+.pageimage {
+    height: 50px;
+}
+
+.maingallery {
+    margin: 40px;
+    margin-top: 0px;
+}
+
+.galleryrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.galleryimage {
+    margin: 10px;
+    width: 150px;
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
+    cursor: pointer;
+}
+
+.modalimage {
+    margin: 10px;
+    width: 170px;
+}
+
+.modalimagelong {
+    margin: 10px;
+    height: 150px;
+}
+
+.galleryimagelong {
+    margin: 10px;
+    width: 200px;
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
+    cursor: pointer;
+}
+
+.galleryimage:hover {
+    transform: rotate(-1deg);
+}
+
+.galleryimagelong:hover {
+    transform: rotate(-1deg);
+}
+
+.galleryproject {
+    margin: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 250px;
+    height: 270px;
+    cursor: pointer;
+}
+
+.projectimage {
+    width: 250px;
+    height: 130px;
+    top: 0;
+    object-fit: cover;
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
+}
+
+.projectimage:hover {
+    transform: rotate(-0.5deg);
+}
+
+.projecttext {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
+    display: table-cell; 
+    text-align: center;
+    width: 250px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+.projectinfo {
+    text-align: left;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.projecttext:hover {
+    transform: rotate(-0.5deg);
+}
+
+.contactlink {
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
+    font-weight: bold;
+}
+
+.contactlink:hover {
+    transform: rotate(-0.2deg);
+}
+
+.divider {
+    margin: 20px;
+    position:relative;
+    top:3px;
+}
+
+.date-time {
+    margin-top: 10px;
+}
+
+.contactmessage {
+    font-style: italic;
+}
+
+.info {
+    text-align: left;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 700px;
+    font-size: 15px;
+}
+
+.easyreading {
+    font-family: 'Hind Siliguri', sans-serif;
+    line-height: 20px;
+    text-indent: 10px;
+}
+
+.easylink {
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
+    cursor: pointer;
+    display: inline-block;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.easylink:hover {
+    transform: rotate(-3deg);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; 
+    
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: absolute;
+    bottom: 0;
+    /* left: -50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    /* left: calc((100% - 80px) / 2); */
+    left: calc((100% - 60%) / 2);
+    top: 50px;
+    width: 60%;
+    max-height: 100%;
+    margin-bottom: 50px;
+
+    overflow: hidden;
+    border: 1px solid white;
+    background-color: black;
+
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+  }
+
+  @media (max-width: 545px) {
+    .modal-content {
+        position: absolute;
+        top: initial;
+        bottom: 0;
+        left: 0;
+    
+        width: 99%;
+        margin: 0;
+        overflow: scroll;
+      }    
+    }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
+  }
+  
+  .close:hover,
+  .close:focus {
+    text-decoration: none;
+    cursor: pointer;
+    transform: rotate(-5deg);
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  
+    .modal-body {
+        width: auto;
+        height: 80%;
+        padding-bottom: 40px;
+        overflow: scroll;
+    }
+
+    .modal-meat {
+        display: none;
+        text-align: left;
+        margin: 30px;
+    }
+
+    .modal-img {
+        display: none;
+        width: auto;
+        height: 70%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 545px) {
+        .modal-img {
+            max-width:50%;
+            min-width: 100px;
+            height: auto;
+        }
+    }
+
+    .modal-video {
+        width: 350px;
+        height: 200px;
+        display: block;
+        margin: 15px 0px;
+    }
+
+    .modal-item {
+        justify-content: center;
+        text-align:center;
+        height: 240px;
+    }
+
+    .modal-video-item {
+        justify-content: center;
+        text-align:center;
+        height: 280px;
+    }
+
+    .modal-item-info {
+        font-size: 12px;
+        max-width: 200px;
+        margin: auto;
+    }
+  
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0} 
+        to {bottom: 0; opacity: 1}
+    }
+    
+    @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+    }
+    
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+    }
+    
+    @keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+    }
+
+ 
+ .timeline-container {
+    width: 95%;
+    padding: 20px 0;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+ }
+ 
+ .timeline-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -0.5px;
+    width: 1px;
+    height: 100%;
+    background-image: linear-gradient(black, white 2%, white 98%, black 100%);
+    z-index: -1; /* so it sits behind .marker */
+ }
+ 
+ .timeline-block {
+    width: -webkit-calc(50% + 5.5px);
+    width: -moz-calc(50% + 5.5px);
+    width: calc(50% + 5.5px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
+ }
+ 
+ .timeline-block-right {
+    float: right;
+ }
+ 
+ .timeline-block-left {
+    float: left;
+    direction: rtl
+ }
+ 
+ .marker {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: black;
+    margin-top: 16px;
+ }
+ 
+ .timeline-content {
+    width: 95%;
+    padding: 0 15px;
+    direction: ltr;
+ }
+ 
+ .timeline-content h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 500
+ }
+ 
+ .timeline-content span {
+    font-size: 15px;
+ }
+ 
+ .timeline-content p {
+    font-size: 14px;
+    word-spacing: 1px;
+    font-family: 'Hind Siliguri', sans-serif;
+    line-height: 20px;
+ }
+ 
+ @media screen and (max-width: 768px) {
+    .timeline-container:before {
+       left: 6.5px;
+       width: 2px;
+    }
+    .timeline-block {
+       width: 100%;
+       margin-bottom: 30px;
+    }
+    .timeline-block-right {
+       float: none;
+    }
+ 
+    .timeline-block-left {
+       float: none;
+       direction: ltr;
+    }
+ }
+ 
