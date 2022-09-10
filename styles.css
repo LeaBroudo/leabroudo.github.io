@@ -229,6 +229,20 @@ h3.navlink:hover {
     transform: rotate(-3deg);
 }
 
+.easylinklong {
+    transition: transform .1s ease-in-out;
+    transform-origin: bottom left;
+    cursor: pointer;
+    display: inline-block;
+    font-style: italic;
+    font-weight: 600;
+    margin-left: -10px; /* needed for art names in artwork page */
+}
+
+.easylinklong:hover {
+    transform: rotate(-0.5deg);
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
