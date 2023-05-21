@@ -116,7 +116,7 @@ function openModal(event, modalId, title, picture, meatId) {
 
   // Id to make the query param for modal
   var idToUse = null;
-  var path = event.composedPath();
+  var path = event?.composedPath();
   if (event && path && (path[0] || path[1])) {
     idToUse = path[0].id || path[1].id;
   }
@@ -127,8 +127,6 @@ function openModal(event, modalId, title, picture, meatId) {
     window.history.replaceState({}, '', `${location.pathname}?${params.toString()}`);
   }
   
-  
-
   var modalBody = modalContent.querySelector('.modal-body');
   if (modalBody) {
     modalBody.scrollTop = 0;
